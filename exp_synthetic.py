@@ -128,17 +128,33 @@ def multi_exp(A_p,T,seed,lam_nonsmooth=0.3):
 
 if __name__ == "__main__":
 
-    for s in range(0,1):
-        multi_exp(A_p = [1,2,1,2,3,1,2,1,2,1,2,2], T = 1500, seed=s,lam_nonsmooth=0.3)
-        multi_exp(A_p = [1,3,2,4,3,3,2,2,3,1,4,2], T = 1500, seed=s,lam_nonsmooth=0.3)
-        multi_exp(A_p = [2,4,5,4,4,3,3,2,3,4,4,2], T = 1500, seed=s,lam_nonsmooth=0.3)
-        multi_exp(A_p = [4,4,5,5,4,6,3,5,3,4,4,3], T = 1500, seed=s,lam_nonsmooth=0.3)
-        multi_exp(A_p = [5,6,5,6,4,6,5,5,6,5,4,3], T = 1500, seed=s,lam_nonsmooth=0.3)
-        multi_exp(A_p = [3,4,5,3,2,3], T = 1500, seed=s,lam_nonsmooth=0.3)
-        multi_exp(A_p = [2,4,5,4,4,3,3,2,3], T = 1500, seed=s,lam_nonsmooth=0.3)
-        multi_exp(A_p = [2,4,5,4,4,3,3,2,3,5,3,2,3,4,3], T = 1500, seed=s,lam_nonsmooth=0.3)
-        multi_exp(A_p = [2,4,5,4,4,3,3,2,3,5,3,2,3,4,3,2,3,5], T = 1500, seed=s,lam_nonsmooth=0.3)
-        multi_exp(A_p = [2,4,5,4,4,3,3,2,3,4,4,2], T = 500, seed=s,lam_nonsmooth=0.3)
-        multi_exp(A_p = [2,4,5,4,4,3,3,2,3,4,4,2], T = 1000, seed=s,lam_nonsmooth=0.3)
-        multi_exp(A_p = [2,4,5,4,4,3,3,2,3,4,4,2], T = 2000, seed=s,lam_nonsmooth=0.3)
-        multi_exp(A_p = [2,4,5,4,4,3,3,2,3,4,4,2], T = 2500, seed=s,lam_nonsmooth=0.3)
+    for s in range(0,10):
+        multi_exp(A_p = [3,4,5,3,4,5,3,5],  T = 1500, seed=s,lam_nonsmooth=0.4) 
+        multi_exp(A_p = [3,4,5,3,4,5,3,5,4,4],  T = 1500, seed=s,lam_nonsmooth=0.3)
+        multi_exp(A_p = [3,4,5,3,4,5,3,4,5,4,4,4],  T = 1500, seed=s,lam_nonsmooth=0.3)
+        multi_exp(A_p = [3,4,5,3,4,5,3,4,5,3,4,5,4,4],  T = 1500, seed=s,lam_nonsmooth=0.3)
+        multi_exp(A_p = [3,4,5,3,4,5,3,4,5,3,4,5,3,4,5,4],   T = 1500, seed=s,lam_nonsmooth=0.3)
+
+        multi_exp(A_p = [1,2,3,1,2,3,1,2,3,2,2,2],  T = 1500, seed=s,lam_nonsmooth=0.2)
+        multi_exp(A_p = [2,3,4,2,3,4,2,3,4,3,3,3],  T = 1500, seed=s,lam_nonsmooth=0.3)
+        multi_exp(A_p = [4,5,6,4,5,6,4,5,6,5,5,5],  T = 1500, seed=s,lam_nonsmooth=0.4)
+        multi_exp(A_p = [5,6,7,5,6,7,5,6,7,6,6,6],  T = 1500, seed=s,lam_nonsmooth=0.5)
+
+        multi_exp(A_p = [3,4,5,3,4,5,3,4,5,4,4,4],  T = 500,  seed=s,lam_nonsmooth=0.3)
+        multi_exp(A_p = [3,4,5,3,4,5,3,4,5,4,4,4],  T = 1000, seed=s,lam_nonsmooth=0.3)
+        multi_exp(A_p = [3,4,5,3,4,5,3,4,5,4,4,4],  T = 2000, seed=s,lam_nonsmooth=0.3)
+        multi_exp(A_p = [3,4,5,3,4,5,3,4,5,4,4,4],  T = 2500, seed=s,lam_nonsmooth=0.3)
+        
+        # multi_exp(A_p = [1,2,1,2,3,1,2,1,2,1,2,2], T = 1500, seed=s,lam_nonsmooth=0.2)
+        # multi_exp(A_p = [1,3,2,4,3,3,2,2,3,1,4,2], T = 1500, seed=s,lam_nonsmooth=0.4)
+        # multi_exp(A_p = [2,4,5,4,4,3,3,2,3,4,4,2], T = 1500, seed=s,lam_nonsmooth=0.5) # 0.55(87.3), 0.5(87.6 ), 0.45(87.6 ), 0.4(87 ), 0.35(85) ,0.3( 86%)
+        # multi_exp(A_p = [4,4,5,5,4,6,3,5,3,4,4,3], T = 1500, seed=s,lam_nonsmooth=0.4)
+        # multi_exp(A_p = [5,6,5,6,4,6,5,5,6,5,4,3], T = 1500, seed=s,lam_nonsmooth=0.5)
+        # multi_exp(A_p = [3,3,3,3,4,4], T = 1500, seed=s,lam_nonsmooth=0.25) # 0.2(87),0.25(88.8),0.3(85.7),0.4(84)
+        # multi_exp(A_p = [2,4,5,4,4,3,3,2,3], T = 1500, seed=s,lam_nonsmooth=0.3)
+        # multi_exp(A_p = [2,4,5,4,4,3,3,2,3,5,3,2,3,4,3], T = 1500, seed=s,lam_nonsmooth=0.3)
+        # multi_exp(A_p = [2,4,5,4,4,3,3,2,3,5,3,2,3,4,3,2,3,5], T = 1500, seed=s,lam_nonsmooth=0.3)
+        # multi_exp(A_p = [2,4,5,4,4,3,3,2,3,4,4,2], T = 500, seed=s,lam_nonsmooth=0.3)
+        # multi_exp(A_p = [2,4,5,4,4,3,3,2,3,4,4,2], T = 1000, seed=s,lam_nonsmooth=0.3)
+        # multi_exp(A_p = [2,4,5,4,4,3,3,2,3,4,4,2], T = 2000, seed=s,lam_nonsmooth=0.3)
+        # multi_exp(A_p = [2,4,5,4,4,3,3,2,3,4,4,2], T = 2500, seed=s,lam_nonsmooth=0.3)
