@@ -432,6 +432,7 @@ def train_model_adam(clstm, X, CovX, A_p, lr,  check_every, truncation=None,
         
         clstm.zero_grad()
 
+        Y = X_to_Y(X,A,A_p)
         # Check progress.
         if (it + 1) % check_every == 0:
             train_loss_list.append(loss.detach())
