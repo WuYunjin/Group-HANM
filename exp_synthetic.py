@@ -67,9 +67,9 @@ def multi_exp(A_p,T,seed,lam_nonsmooth=0.3):
 
 
     # Train Y with GISTA using cLSTM
-    check_every = 1
+    check_every = 100
     train_loss_list, train_mse_list = train_model_gista(
-        clstm, Y, lam=lam_nonsmooth, lam_ridge=1e-4, lr=0.005, max_iter=1, check_every=check_every)#, truncation=5)
+        clstm, Y, lam=lam_nonsmooth, lam_ridge=1e-4, lr=0.005, max_iter=5000, check_every=check_every)#, truncation=5)
 
 
     # Loss function plot
